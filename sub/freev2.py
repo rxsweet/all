@@ -59,7 +59,7 @@ class tempsite():
                 break
             except:
                 v2conf=""
-        with open("./sub/helol/"+self.name,"w") as f:
+        with open("c:/sub/sweetrx/"+self.name,"w") as f:
                     f.write(v2conf)
 
 def getconf():
