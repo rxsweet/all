@@ -4,7 +4,7 @@ on:
     schedule:
     - cron:	'0 */5 * * *'	
 jobs:
-    build:
+    build: 
         runs-on: ubuntu-latest
         steps:
         - name: Setup Python
