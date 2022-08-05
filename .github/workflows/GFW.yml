@@ -2,18 +2,19 @@ name: GFW
 
 on: 
     schedule: 
-    - cron:	'0 */5 * * *'	
+    - cron:	'*/5 * * * *'	
 jobs: 
  build: 
   runs-on: ubuntu-latest
   steps:
-    - name: Setup Python
-  uses: actions/setup-python@v4 
-  with: 
-    python-version:'3.x'
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.x'
     - name: Main.py
       run: |
-      python ./utils/freev2/main.py
+        python ./utils/freev2/main.py
 
 
          
