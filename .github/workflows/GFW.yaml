@@ -11,7 +11,6 @@ jobs:
             uses: 	actions/setup-python@v4  
             with:
                 python-version: '3.x'
-		
            - name: main.py
             run: |
             python ./utils/freev2/main.py
