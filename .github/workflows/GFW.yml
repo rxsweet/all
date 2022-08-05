@@ -1,4 +1,4 @@
-name GFW
+name: GFW
 
 on:
 	schedule:
