@@ -9,8 +9,9 @@ jobs:
   steps:
     - name: Setup Python
   uses: actions/setup-python@v3 
-  with: python-version: '3.x'
-  - name: Main.py
+  with: 
+    python-version:'3.x'
+    - name: Main.py
       run: |
       python ./utils/freev2/main.py
 
