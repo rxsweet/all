@@ -2,7 +2,7 @@ name: GFW
 
 on: 
     schedule: 
-    - cron:	'*/5 * * * *'	
+    - cron:	'0 1,13 * * *'	
 jobs: 
  build: 
   runs-on: ubuntu-latest
