@@ -1,18 +1,20 @@
 name: GFW
 
 on:
-  schedule:
-	- cron: '*/5 * * * *'
-	workflow_dispatch:
+    schedule:
+    - cron:	'0 */5 * * *'
 		
 jobs:
-	build:
-		runs-on:ubuntu-latest
-		steps:
-		- name: Setup Python
-			uses: actions/setup-python@v4
-			with:
-				python-version: '3.x'
-		- name: main.py
-			run: |
-			python ./utils/freev2/main.py
+    build:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Setup Python
+	
+            uses: 	actions/setup-python@v4
+	    
+            with:
+                python-version: '3.x'
+		
+           - name: main.py
+            run: |
+            python ./utils/freev2/main.py
