@@ -1,5 +1,4 @@
 name: rx
-
 on: 
  schedule: 
      - cron: '*/5 * * * *'	
