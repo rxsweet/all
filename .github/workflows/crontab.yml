@@ -44,4 +44,3 @@ jobs:
         git add ./sub
         git commit -m "$(date '+%Y.%m.%d %H:%M:%S') 更新机场订阅" || true
         git push origin main || true
-
