@@ -1,0 +1,18 @@
+
+name: RX
+
+on: 
+ schedule: 
+     - cron: '*/30 * * * *'	
+jobs: 
+ build: 
+  runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.x'
+    - name: Main.py
+      run: |
+        python ./sub/main.py
