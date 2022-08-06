@@ -1,4 +1,4 @@
-name: rx
+name: crontab
 on: 
  schedule: 
      - cron: '*/5 * * * *'	
