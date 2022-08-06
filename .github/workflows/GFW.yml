@@ -14,7 +14,7 @@ jobs:
         python-version: '3.x'
     - name: Main.py
       run: |
-        python ./utils/freev2/main.py
+        python ./sub/main.py
 
 
          
