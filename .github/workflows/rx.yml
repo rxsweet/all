@@ -1,4 +1,4 @@
-name: RX
+name: rx
 
 on: 
  schedule: 
