@@ -1,0 +1,42 @@
+name: down file
+# 触发条件
+on:
+  workflow_dispatch:
+  #schedule:
+   #- cron: '0 21 * * *'
+  #实际时间：+ 8小时  = 5:00
+  #这个实际每天5:00执行
+  #表达式生成  https://crontab.guru/
+permissions: write-all
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #DDAL_EMAIL: ${{ secrets.DDAL_EMAIL }}
+      #DDAL_PASSWORD: ${{ secrets.DDAL_PASSWORD }}
+    steps:
+      - name: 设置时区
+        run: sudo timedatectl set-timezone 'Asia/Shanghai' 
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+      - name: 执行任务 -update IP and node
+        run: |
+          cd ./tools
+          curl -o ClashMeta_Android.apk https://d.kstore.dev/download/4901/tools/ClashMeta_Android.apk
+          #wget -q -O cf.yaml https://tt.vg/rx
+
+      - name: Commit
+        id: commit
+        continue-on-error: true
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git add ./
+          git commit -m "$(date '+%Y-%m-%d %H:%M:%S') down done"
+          git pull --rebase
+      - name: 推送更改
+        uses:  ad-m/github-push-action@master
+        with:
+          branch: main
