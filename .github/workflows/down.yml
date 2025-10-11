@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.ref }}
-      - name: 执行任务 -update IP and node
+      - name: 执行任务 - down
         run: |
           cd ./tools
           curl -o ClashMeta_Android.apk https://d.kstore.dev/download/4901/tools/ClashMeta_Android.apk
