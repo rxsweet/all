@@ -25,10 +25,6 @@ jobs:
         run: |
           cd ./tools
           curl -o CF_proxy_IP.zip https://d.kstore.dev/download/4901/tools/CF_proxy_IP.zip
-          curl -o nodesCatch.7z https://d.kstore.dev/download/4901/tools/nodesCatch.7z
-          curl -o WinXray.7z https://d.kstore.dev/download/4901/tools/WinXray.7z
-          curl -o TVBox_q215613905_20230302-0924.apk https://rxsub.vercel.app/tvbox/apk/TVBox_q215613905_20230302-0924.apk
-          
           #wget -q -O cf.yaml https://tt.vg/rx
 
       - name: Commit
